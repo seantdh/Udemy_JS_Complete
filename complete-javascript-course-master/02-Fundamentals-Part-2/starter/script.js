@@ -80,3 +80,23 @@ console.log(friends);
 
 const test = new Array(12, 'Minh', 'Dương bếu');
 console.log(test);
+
+// Object Method
+
+// Thêm phần tử vào cuối Array
+
+friends.push('An');
+console.log(friends);
+
+// Thêm phần từ vào đầu Array
+
+friends.unshift('Nhân');
+console.log(friends);
+
+// Xóa phần tử đầu Array
+friends.shift();
+console.log(friends);
+
+// Xóa phần tử cuối Array
+friends.pop();
+console.log(friends);
