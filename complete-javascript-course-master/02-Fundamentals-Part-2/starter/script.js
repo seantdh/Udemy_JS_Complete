@@ -100,3 +100,5 @@ console.log(friends);
 // Xóa phần tử cuối Array
 friends.pop();
 console.log(friends);
+
+// Objects
