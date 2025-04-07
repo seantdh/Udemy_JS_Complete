@@ -102,4 +102,72 @@ friends.pop();
 console.log(friends);
 
 // Introduce about Objects
-// Test for Code pushing github
+
+// Ví dụ về tạo 1 Object
+
+// const haiInfo = {
+//     firstName: 'Hải',
+//     lastName: 'Trần',
+//     middleName: 'Duy',
+//     age: 2025 - 1989,
+//     job: 'IT Manager',
+//     friends: ['Dương bếu', 'Thành', 'Tũn hâm']
+// }
+
+// console.log(haiInfo);
+
+// const nameKey = 'Name';
+// console.log(haiInfo['first' + nameKey]);
+// console.log(haiInfo['last' + nameKey]);
+// console.log(haiInfo.lastName);
+// console.log(haiInfo.middleName);
+// console.log(haiInfo.firstName);
+
+// console.log(haiInfo['lastName']);
+
+// const haiInterestedIn = prompt('Xin chào! Bạn muốn biết gì về anh Hải? Name or age or job? ');
+
+// if (haiInfo[haiInterestedIn]) {
+//     console.log(haiInfo[haiInterestedIn]);
+// } else {
+//     console.log('No Information');
+// }
+
+// console.log(typeof haiInfo['friends']);
+
+// "Hải has 3 friends, and his best friend is called Dương bếu"
+
+const haiInfo = {
+    firstName: 'Hải',
+    lastName: 'Trần',
+    middleName: 'Duy',
+    birthYear: 1989,
+    // age: 2025 - this.birthYear,
+    job: 'IT Manager',
+    friends: ['Dương bếu', 'Thành', 'Tũn hâm'],
+    hasDriverLicense: true,
+    calAge: function () {
+        this.age = 2025 - this.birthYear;
+        return this.age;
+    },
+
+    getSumary: function () {
+        return `${this.firstName} is a ${this.calAge()} years old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license`;
+    }
+}
+
+// Cách 1: 
+// console.log(haiInfo.firstName + ' has ' + haiInfo.friends.length + ' friends, and his best friends is called ' + haiInfo.friends[0]);
+
+//Cách 2: 
+// console.log(`${haiInfo.firstName} has ${haiInfo.friends.length} friends, and his best friends is called ${haiInfo.friends[0]}`);
+
+// Object Methods
+// "Hải is a 36 years old teacher, and he has a / not driver's license"
+
+// console.log(haiInfo);
+// console.log(haiInfo.calAge());
+
+console.log(haiInfo.getSumary());
+
+
