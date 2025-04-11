@@ -170,4 +170,125 @@ const haiInfo = {
 
 console.log(haiInfo.getSumary());
 
+// The for Loop
+// Ví dụ ứng dụng For Loop
 
+// for (let times = 1; times <= 10; times++) {
+//     console.log(`Tuần này tôi đã đi đánh cầu lông ${times} lần`);
+// }
+
+// Looping Arrays, Breaking and Continuing
+
+const minhInfo = [
+    'Minh',
+    'Trần',
+    'Trường',
+    2025 - 1989,
+    'IT Manager',
+    ['Dương bếu', 'Thành', 'Tũn hâm', true, 68, null, NaN],
+]
+
+const types = [];
+
+// const minhInfo = {
+//     firstName: 'Hải',
+//     lastName: 'Trần',
+//     middleName: 'Duy',
+//     age: 2025 - 1989,
+//     job: 'IT Manager',
+//     friends: ['Dương bếu', 'Thành', 'Tũn hâm']
+// }
+
+
+for (let i = 0; i < minhInfo.length; i++) {
+    // Log data from minhInfo Array
+    console.log(minhInfo[i], typeof minhInfo[i]);
+
+    // Đưa data định dạng vào types array
+    // types[i] = typeof minhInfo[i];
+
+    // Dùng hàm push để đưa data vào cuối mảng.
+    types.push(typeof minhInfo[i]);
+}
+
+console.log(types);
+
+// Trường hợp muốn log toàn bộ mọi phần từ trong array bên trong ra console
+// for (let i = 0; i < minhInfo.length; i++) {
+
+//         if (typeof minhInfo[i] === 'object' && minhInfo[i] !== null) {
+//             for (let j = 0; j < minhInfo[i].length; j++) {
+//                 console.log(minhInfo[i][j], typeof minhInfo[i][j]);
+//             }
+//         } else {
+//             console.log(minhInfo[i], typeof minhInfo[i]);
+//         }
+//     };
+
+
+// Tính tuổi cho tất cả các năm sinh trong mảng sau và đưa kết quả đó vào vào 1 array mới.
+const years = [1958, 1961, 1989, 1996, 1967, 1974, 2003];
+
+// Tạo 1 mảng trống dự định sẽ đẩy kết quả tính toán sang
+const agesNow = [];
+
+// Dùng vòng lặp for để lặp qua tất cả các năm và tính tuổi 
+for (let i = 0; i < years.length; i++) {
+    agesNow.push(2025 - years[i]);
+}
+
+// Log data ra
+console.log('---- Bên dưới là Array tính tuổi nha ------------');
+console.log(agesNow);
+
+// Log data theo chiều index giảm dần
+
+// console.log('---- Log data theo chiều index giảm dần ------------');
+
+console.log('-------------- Tìm hiểu về Continue & Break --------------');
+
+const tunInfo = [
+    'Minh',
+    'Trần',
+    'Trường',
+    2025 - 1989,
+    'IT Manager',
+    ['Dương mỏ hỗn', 'Thành', 'Tũn hâm', true, 68, null, NaN],
+]
+
+// for (let i = tunInfo.length - 1; i >= 0; i--) {
+//     if (typeof tunInfo[i] === 'object' && tunInfo[i] !== null) {
+//         for (let j = 0; j < tunInfo[i][j].length; j++) {
+//             console.log('j = ' + j + ' ==> ', tunInfo[i][j], ': ' + typeof tunInfo[i][j]);
+//         }
+//     } else {
+//         console.log('i = ' + i + ' ==> ', tunInfo[i], ': ' + typeof tunInfo[i]);
+//     }
+
+// }
+
+// Continue and Break
+
+// Continue
+for (let i = 0; i < tunInfo.length; i++) {
+    if (typeof tunInfo[i] === 'number') continue;
+    console.log(tunInfo[i]);
+}
+
+console.log('---------------  WHILE -----------------------------');
+
+
+// Break
+for (let i = 0; i < tunInfo.length; i++) {
+    if (typeof tunInfo[i] === 'number') break;
+    console.log(tunInfo[i]);
+}
+
+// While Loop
+
+let i = 0;
+
+while (i < tunInfo.length) {
+    console.log(tunInfo[i]);
+    i++;
+}
